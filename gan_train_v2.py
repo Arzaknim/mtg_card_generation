@@ -11,12 +11,12 @@ import os
 # ------------------------------
 # CONFIG
 # ------------------------------
-latent_dim = 100
+latent_dim = 100  # noise
 image_size = 64
-channels = 3
-batch_size = 32
-epochs = 50
-lr = 0.0002
+channels = 3  # rgb
+batch_size = 32 # 128 in paper
+epochs = 50 # is probably too much for MTG cards xd
+lr = 0.0002 # and half for disc
 beta1 = 0.5
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
